@@ -237,3 +237,11 @@ function changeWorkshop() {
 }
 
 /* Change Workshop Button End */
+
+/* Coming Soon Alert Start */
+
+function comingSoonAlert() {
+    alert("Coming Soon")
+}
+
+/* Coming Soon Alert End */

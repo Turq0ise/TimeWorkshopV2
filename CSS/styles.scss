@@ -136,6 +136,12 @@ body {
     }
 }
 
+@media(max-width: 1505px) {
+    .side-nav {
+        width: 100vw;
+    }
+}
+
 .section-container {
     padding: Min(15%, 12.5rem);
 }
@@ -286,6 +292,10 @@ body {
         .left-sub-section {
             display: none;
         }
+
+        .right-sub-section {
+            width: 100%;
+        }
     }
 }
 
@@ -407,9 +417,10 @@ body {
         top: 50%;
         left: 0%;
         transform: translate(0%, -50%);
+        width: 100%;
 
         h1 {
-            font-size: clamp(2.9rem, 6.5vw, 5.625rem);
+            font-size: clamp(2.35rem, 5.75vw, 5.625rem);
             font-weight: 600;
             text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         }
@@ -442,9 +453,9 @@ body {
             width: 80%;
             display: flex;
             flex-direction: row;
+            height: auto;
 
             .workshops {
-
                 h1 {
                     font-size: clamp(2.9rem, 6.5vw, 5.625rem);
                     font-weight: 600;
@@ -478,7 +489,7 @@ body {
             
             #arrow-btn {
                 color: #E8D6AF;
-                font-size: clamp(7rem, 15vw, 12.5rem);
+                font-size: clamp(4.3rem, 10vw, 12.5rem);
                 cursor: pointer;
             }
 
@@ -502,7 +513,7 @@ body {
     display: flex;
     flex-direction: row;
     padding: Min(3%, 5rem) Min(15%, 12.5rem) Min(7%, 8rem) Min(15%, 12.5rem);
-    
+
     .text {
         width: 50%;
         padding: 0 .5rem;
@@ -528,6 +539,7 @@ body {
             padding: 1rem;
             padding-bottom: 1.5rem;
             border-radius: 10px;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
             .questions {
                 display: flex;
@@ -561,12 +573,12 @@ body {
                 border-radius: .9rem;
                 margin-top: 1rem;
                 width: 100%;
-                height: clamp(1.5rem, 5vw, 3rem);
+                height: clamp(2rem, 5vw, 3rem);
                 font-size: clamp(1.1rem, 5vw, 1.5rem);
                 cursor: pointer;
             }
         }
-    }
+    } 
 }
 
 @media(max-width: 1080px) {
@@ -577,6 +589,24 @@ body {
         .form {
             width: 100%;
             padding: 1rem;
+        }
+    }
+}
+
+@media(max-width: 385px) {
+    .section-container,
+    .benefits,
+    .sign-up {
+        padding: 1rem;
+    }
+
+    .section-two {
+        .main-content {
+            flex-direction: column;
+
+            .right {
+                padding-top: 1rem;
+            }
         }
     }
 }
