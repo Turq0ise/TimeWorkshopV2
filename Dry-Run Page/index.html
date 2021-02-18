@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <link rel="stylesheet" href="https://cdn.iconmonstr.com/1.3.0/css/iconmonstr-iconic-font.min.css">
+    <!--Favicon Icon-->
+        <link rel="apple-touch-icon" sizes="57x57" href="../IMG & VIDS/Favicon/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="../IMG & VIDS/Favicon/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="../IMG & VIDS/Favicon/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="../IMG & VIDS/Favicon/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="../IMG & VIDS/Favicon/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="../IMG & VIDS/Favicon/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="../IMG & VIDS/Favicon/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="../IMG & VIDS/Favicon/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="../IMG & VIDS/Favicon/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="../IMG & VIDS/Favicon/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../IMG & VIDS/Favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../IMG & VIDS/Favicon/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../IMG & VIDS/Favicon/favicon-16x16.png">
+        <link rel="manifest" href="../IMG & VIDS/Favicon/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="../IMG & VIDS/Favicon/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+    <!--Favicon Icon-->
+</head>
+<body id="dry-run-page">
+    <div class="loader">
+        <h1>Please wait while the page is loading...</h1>
+    </div>
+
+    <header class="main-nav-bar nav-container">
+        <div class="nav-bar">
+            <img src="../IMG & VIDS/Logo/Time Logo 1.png" alt="">
+            <i class="im im-menu" id="menu" onclick="toggleSideNav()"></i>
+        </div>
+    </header>
+
+    <aside class="side-nav">
+        <div class="content">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li>
+                    <a href="#">Workshops</a>
+                    <i class="im im-angle-down" id="arrow-down" onclick="toggleDropDown()"></i>
+                </li>
+                <ul id="drop-down-items">
+                    <li><a href="../Dry-Run Page/index.html">Dry-Run</a></li>
+                    <li><a href="#">Final</a></li>
+                </ul>
+            </ul>
+
+            <p id="clock"></p>
+        </div>
+    </aside>
+
+    <section class="section-one">
+        <h1>Dry-Run Workshop Results</h1>
+    </section>
+
+    <div class="section-container">
+        <div class="main-content">
+            <div class="overall-feedback">
+                <h1>Overall Feedback from our Dry-Run Participants</h1>
+                <p>They think that time management is important because it helps me know what to do and organizes it to mitigate the stress and finish the tasks efficiently. Most of them liked our workshop while one was not sure about it. Our participants wanted us to improve on our workshop and provided us with possible improvements. A presentation and visuals will make it better. Giving the presenter more time to study so this will reduce the dead air.</p>
+            </div>
+        
+            <div class="usability-responses">
+                <h1>Usability Responses</h1>
+                <p>We had 12 questions in total and provided below are their responses either summarized or in graph form.</p>
+
+                <div class="question-and-answer">
+                    <h1>What is time management to you?</h1>
+                    <p>Time management is about doing your task perfectly at a short amount of time.</p>
+                </div>
+                <div class="question-and-answer">
+                    <h1>Is time management useful in your day to day life? Why?</h1>
+                    <p>Yes, because it helps me know what to do and organizes it to mitigate the stress and finish the tasks efficiently.</p>
+                </div>
+                <div class="question-and-answer">
+                    <h1>Do you want a game like activity in our workshop?</h1>
+                    <canvas id="chartOne" width="30%" height="15%"></canvas>
+                    <!--<div id="chartContainer" style="height: 370px; width: 100%;"></div>-->
+                </div>
+                <div class="question-and-answer">
+                    <h1>How many game like activities do you want in our workshop?</h1>
+                    <canvas id="chartTwo" width="30%" height="15%"></canvas>
+                </div>
+
+                <h1>Do you want to see these questions in our workshop?</h1>
+                <div class="question-and-answer">
+                    <h1>How can we do more tasks in less time?</h1>
+                    <p>All of our participants wanted to see this question in our workshop.</p>
+                </div>
+                <div class="question-and-answer">
+                    <h1>How can we multitask?</h1>
+                    <p>All of our participants wanted to see this question in our workshop.</p>
+                </div>
+
+                <h1>Participants' Experience Questions</h1>
+                <div class="question-and-answer">
+                    <h1>Did you like our workshop?</h1>
+                    <canvas id="chartThree" width="30%" height="15%"></canvas>
+                </div>
+                <div class="question-and-answer">
+                    <h1>Based on your experience, would you recommend our workshop?</h1>
+                    <canvas id="chartFour" width="30%" height="15%"></canvas>
+                </div>
+                <div class="question-and-answer">
+                    <h1>What can we do to improve our workshop?</h1>
+                    <p>A presentation and visuals will make it better. Giving the presenter more time to study so this will reduce the dead air.</p>
+                </div>
+                <div class="question-and-answer">
+                    <h1>If we implement these improvements will you recommend it?</h1>
+                    <canvas id="chartFive" width="30%" height="15%"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+<script src="../JS/main.js"></script>
+<script src="../JS/charts.js"></script>
+</html>

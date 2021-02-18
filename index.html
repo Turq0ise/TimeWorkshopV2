@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time</title>
+    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="stylesheet" href="https://cdn.iconmonstr.com/1.3.0/css/iconmonstr-iconic-font.min.css">
+    <!--Favicon Icon-->
+        <link rel="apple-touch-icon" sizes="57x57" href="IMG & VIDS/Favicon/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="IMG & VIDS/Favicon/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="IMG & VIDS/Favicon/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="IMG & VIDS/Favicon/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="IMG & VIDS/Favicon/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="IMG & VIDS/Favicon/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="IMG & VIDS/Favicon/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="IMG & VIDS/Favicon/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="IMG & VIDS/Favicon/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="IMG & VIDS/Favicon/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="IMG & VIDS/Favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="IMG & VIDS/Favicon/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="IMG & VIDS/Favicon/favicon-16x16.png">
+        <link rel="manifest" href="IMG & VIDS/Favicon/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="IMG & VIDS/Favicon/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+    <!--Favicon Icon-->
+</head>
+<body onload="wordCycle()">
+    <div class="loader">
+        <h1>Please wait while the page is loading...</h1>
+    </div>
+
+    <header class="main-nav-bar nav-container">
+        <div class="nav-bar">
+            <img src="IMG & VIDS/Logo/Time Logo 1.png" alt="">
+            <i class="im im-menu" id="menu" onclick="toggleSideNav()"></i>
+        </div>
+    </header>
+
+    <aside class="side-nav">
+        <div class="content">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li>
+                    <a href="#">Workshops</a>
+                    <i class="im im-angle-down" id="arrow-down" onclick="toggleDropDown()"></i>
+                </li>
+                <ul id="drop-down-items">
+                    <li><a href="Dry-Run Page/index.html">Dry-Run</a></li>
+                    <li><a href="#">Final</a></li>
+                </ul>
+            </ul>
+
+            <p id="clock"></p>
+        </div>
+    </aside>
+
+    <section class="landing">
+        <div id="top">
+            <h1 id="landing-text">Think about the time you've wasted.</h1>
+        </div>
+        <div id="bottom"></div>
+    </section>
+
+    <section class="workshop-info">
+        <div class="short-info">
+            <h1>We provide Time Management Workshops and</h1>
+        </div>
+        <div class="goals">
+            <h1>Our goals are:</h1>
+            <div class="list">
+                <ul>
+                    <li>To educate people the importance of time management.</li>
+                    <li>Providing information on what time management is and how to do it.</li>
+                    <li>Share some ways to improve your time management skills.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
+    <section class="benefits">
+        <div class="left-sub-section">
+            <img src="IMG & VIDS/Stock Img/to do.jpg" alt="">
+        </div>
+        <div class="right-sub-section">
+            <h1>Benefits:</h1>
+            <div class="list">
+                <ul>
+                    <li>This will help you effectively save your time.</li>
+                    <li>Distribute your time to do what you need and have time to relax.</li>
+                    <li>Help you focus better on the task and reduce the stress experienced from cramming.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="feedback">
+        <div class="section-container">
+            <h1>Feedback</h1>
+            <p class="note">These are from the participants from our Dry-Run. (Mostly for improvement)</p>
+            <div class="cards-cycle">
+                <div class="cards fade-in-anim">
+                    <div class="message">
+                        <h2>Put in visuals.</h2>
+                    </div>
+                    <div class="participant">
+                        <img src="IMG & VIDS/Stock Img/Profiles/Luigi.jpg" alt="">
+                        <p>Luigi Miguel C. Gonzales</p>
+                    </div>
+                </div>
+                <div class="cards fade-in-anim">
+                    <div class="message">
+                        <h2>Less dead air and include visual aids.</h2>
+                    </div>
+                    <div class="participant">
+                        <img src="IMG & VIDS/Stock Img/Profiles/Ahmed.jpg" alt="">
+                        <p>Ahmed Ahmed Salem Ahmed Illescas</p>
+                    </div>
+                </div>
+                <div class="cards fade-in-anim">
+                    <div class="message">
+                        <h2>Make a presentation.</h2>
+                    </div>
+                    <div class="participant">
+                        <img src="IMG & VIDS/Stock Img/Profiles/Lorenzo.jpg" alt="">
+                        <p>Lorenzo E. Suerte</p>
+                    </div>
+                </div>
+                <div class="cards fade-in-anim">
+                    <div class="message">
+                        <h2>Give the presenter more time to study his topic.</h2>
+                    </div>
+                    <div class="participant">
+                        <img src="IMG & VIDS/Stock Img/Profiles/Ram.jpg" alt="">
+                        <p>Ram De Leon</p>
+                    </div>
+                </div>
+
+                <div class="btn-nav">
+                    <div class="dot-btn" onclick="manualSlides(0)"></div>
+                    <div class="dot-btn" onclick="manualSlides(1)"></div>
+                    <div class="dot-btn" onclick="manualSlides(2)"></div>
+                    <div class="dot-btn" onclick="manualSlides(3)"></div>
+                </div>
+            </div>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="isolation:isolate" viewBox="0 0 258 130" width="100%" height="100%" preserveAspectRatio="none"><defs><clipPath id="_clipPath_Go0YWVaa9iSW6klm8pU5YIrMi8QOXL5q"><rect width="258" height="130"/></clipPath></defs><g clip-path="url(#_clipPath_Go0YWVaa9iSW6klm8pU5YIrMi8QOXL5q)"><path d=" M 29.025 85.54 C 11.18 67.258 2.172 107.622 0 130 L 258 130 C 257.798 117.196 255.192 89.488 245.57 81.806 C 233.544 72.202 181.742 104.747 151.038 89.986 C 120.333 75.226 115.495 89.986 85.933 101.012 C 56.37 112.038 51.331 108.393 29.025 85.54 Z " fill="rgb(255,194,54)"/></g></svg>
+    </section>
+
+    <section class="section-one">
+        <div class="main-content section-container">
+            <h1>Time Management Workshop for <span id="cycle"></span></h1>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="isolation:isolate" viewBox="0 0 258 162" width="100%" height="100%" preserveAspectRatio="none"><defs><clipPath id="_clipPath_kzXFKscHDoiR78vtPbsZHzsRm7mw6kKP"><rect width="258" height="162"/></clipPath></defs><g clip-path="url(#_clipPath_kzXFKscHDoiR78vtPbsZHzsRm7mw6kKP)"><path d=" M 64.953 74.982 C 35.452 67.711 9.471 48.69 0 40.056 L 0 0 L 258 0 L 258 76.605 C 258 87.338 241.208 107.637 205.809 104.067 C 170.41 100.496 167.119 120.491 124.936 107.637 C 82.753 94.783 101.83 84.071 64.953 74.982 Z " fill="rgb(255,194,54)"/></g></svg>
+    </section>
+
+    <section class="section-two">
+        <div class="main-content section-container">
+            <div class="left">
+                <div class="workshops">
+                    <h1>Dry-Run Workshop</h1>
+                    <a href="Dry-Run Page/index.html"><button>Learn More</button></a>
+                </div>
+                <div class="workshops" id="none">
+                    <h1>Final Workshop</h1>
+                    <a href="#"><button>Learn More</button></a>
+                </div>
+            </div>
+            <div class="right">
+                <i class="im im-angle-right-circle" id="arrow-btn" onclick="changeWorkshop()"></i>
+            </div>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="isolation:isolate" viewBox="0 0 258 133" width="100%" height="100%" preserveAspectRatio="none"><defs><clipPath id="_clipPath_2is0YNAJWZbIapt4qDSBIK79MNA19Oi6"><rect width="258" height="133"/></clipPath></defs><g clip-path="url(#_clipPath_2is0YNAJWZbIapt4qDSBIK79MNA19Oi6)"><path d=" M 177.871 87.112 C 209.922 94.799 244.623 41.574 258 14 L 258 133 L 0 133 L 0 84.833 C 0 83.519 4.423 82.333 24.267 87.112 C 49.072 93.087 79.592 87.112 112.06 72.33 C 144.528 57.547 137.806 77.504 177.871 87.112 Z " fill="rgb(255,194,54)"/></g></svg>
+    </section>
+
+    <section class="sign-up">
+        <div class="text">
+            <h1>Join us!</h1>
+            <p>Fill up this form to join our workshop and recieve news when our workshop will start.</p>
+        </div>
+        <div class="form">
+            <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdIzEsb-8sk4GGjE2sImw3JLyT0QEHzmvk313ng4-aj74uIRw/formResponse">
+                <div class="questions">
+                    <label>Email<span class="required">*</span></label>
+                    <p>If you are an APEC Student please fill in your APEC Gmail.</p>
+                    <input type="text" name="entry.1955980350" required>
+                </div>
+                <div class="questions">
+                    <label>First Name<span class="required">*</span></label>
+                    <input type="text" name="entry.1815995461" required>
+                </div>
+                <div class="questions">
+                    <label>Last Name<span class="required">*</span></label>
+                    <input type="text" name="entry.327491260" required>
+                </div>
+                <div class="questions">
+                    <label>Age<span class="required">*</span></label>
+                    <input type="number" name="entry.382166275" required>
+                </div>
+                <div class="questions">
+                    <label>Section</label>
+                    <p>For APEC Students</p>
+                    <input type="text" name="entry.1355983197">
+                </div>
+                <div class="questions">
+                    <label>Branch</label>
+                    <p>For APEC Students</p>
+                    <input type="text" name="entry.1505788412">
+                </div>
+                <button type="submit" class="submit-button">Submit</button>
+            </form>
+        </div>
+    </section>
+</body>
+<script src="JS/main.js"></script>
+</html>
