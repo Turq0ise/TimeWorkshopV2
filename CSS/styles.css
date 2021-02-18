@@ -116,26 +116,27 @@ body {
 .side-nav .content ul li {
   list-style: none;
   line-height: 2.5;
-  border-bottom: 1px black solid;
+  border-bottom: 1px #FFC236 solid;
 }
 
 .side-nav .content ul li a {
   text-decoration: none;
-  color: black;
+  color: #E8D6AF;
   font-size: clamp(1rem, 3vw, 2rem);
   font-weight: 600;
 }
 
 .side-nav .content ul li #arrow-down {
   font-size: clamp(0.9rem, 3vw, 1.9rem);
+  color: #E8D6AF;
 }
 
 .side-nav .content ul li:nth-child(1) {
-  border-top: 1px black solid;
+  border-top: 1px #FFC236 solid;
 }
 
 .side-nav .content ul #drop-down-items {
-  border-bottom: 1px black solid;
+  border-bottom: 1px #FFC236 solid;
   display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -147,10 +148,19 @@ body {
   background-color: rgba(63, 62, 58, 0.949);
 }
 
+.side-nav .content ul li:hover a {
+  color: #FFC236;
+}
+
+.side-nav .content ul #arrow-down:hover {
+  color: #FFC236;
+}
+
 .side-nav #clock {
   font-size: 25px;
   font-weight: 600;
   line-height: 2.5;
+  color: #E8D6AF;
 }
 
 .section-container {
