@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time | Workshop Info</title>
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <link rel="stylesheet" href="https://cdn.iconmonstr.com/1.3.0/css/iconmonstr-iconic-font.min.css">
+    <!--Favicon Icon-->
+        <link rel="apple-touch-icon" sizes="57x57" href="../IMG & VIDS/Favicon/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="../IMG & VIDS/Favicon/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="../IMG & VIDS/Favicon/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="../IMG & VIDS/Favicon/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="../IMG & VIDS/Favicon/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="../IMG & VIDS/Favicon/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="../IMG & VIDS/Favicon/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="../IMG & VIDS/Favicon/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="../IMG & VIDS/Favicon/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="../IMG & VIDS/Favicon/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../IMG & VIDS/Favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../IMG & VIDS/Favicon/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../IMG & VIDS/Favicon/favicon-16x16.png">
+        <link rel="manifest" href="../IMG & VIDS/Favicon/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="../IMG & VIDS/Favicon/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+    <!--Favicon Icon-->
+</head>
+<body id="workshop-info-page">
+    <div class="loader">
+        <h1>Please wait while the page is loading...</h1>
+    </div>
+
+    <header class="main-nav-bar nav-container">
+        <div class="nav-bar">
+            <img src="../IMG & VIDS/Logo/Time Logo 1.png" alt="">
+            <i class="im im-menu" id="menu" onclick="toggleSideNav()"></i>
+        </div>
+    </header>
+
+    <aside class="side-nav">
+        <div class="content">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li>
+                    <a href="../index.html#workshop-section">Workshops</a>
+                    <i class="im im-angle-down" id="arrow-down" onclick="toggleDropDown()"></i>
+                </li>
+                <ul id="drop-down-items">
+                    <li><a href="../Workshop Info/index.html">About</a></li>
+                    <li><a href="../Dry-Run Page/index.html">Dry-Run</a></li>
+                    <li><a href="#" onclick="comingSoonAlert()">Final</a></li>
+                </ul>
+                <li><a href="../index.html#sign-up-section">Sign-Up</a></li>
+            </ul>
+
+            <p id="clock"></p>
+        </div>
+    </aside>
+
+    <section class="section-one">
+        <h1>About our Workshop</h1>
+    </section>
+
+    <div class="section-container">
+        <div class="main-content">
+            <div class="question-and-answer">
+                <h1>What is our workshop all about?</h1>
+                <p>Our workshop is all about Time Management.</p>
+            </div>
+            <div class="question-and-answer">
+                <h1>What will we get from this workshop?</h1>
+                <p>After this workshop we will provide you with ways to improve your time management skills.</p>
+            </div>
+            <div class="question-and-answer">
+                <h1>What will the workshop contain?</h1>
+                <p>The workshop will contain a short ice-breaker/game at the start of the workshop. Next, the participants will share their ways of managing their time and talk with each other to improve each other's way of managing. After that, the host will give tips to further improve their skills.</p>
+            </div>
+            <div class="question-and-answer">
+                <h1>Where and when is the workshop?</h1>
+                <p>Our workshop will be hosted on Zoom Rooms and the date is to be decided.</p>
+            </div>
+            <div class="question-and-answer">
+                <h1>Where can we sign up?</h1>
+                <div class="form">
+                    <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdIzEsb-8sk4GGjE2sImw3JLyT0QEHzmvk313ng4-aj74uIRw/formResponse">
+                        <div class="questions">
+                            <label>Email<span class="required">*</span></label>
+                            <p>If you are an APEC Student please fill in your APEC Gmail.</p>
+                            <input type="text" name="entry.1955980350" required>
+                        </div>
+                        <div class="questions">
+                            <label>First Name<span class="required">*</span></label>
+                            <input type="text" name="entry.1815995461" required>
+                        </div>
+                        <div class="questions">
+                            <label>Last Name<span class="required">*</span></label>
+                            <input type="text" name="entry.327491260" required>
+                        </div>
+                        <div class="questions">
+                            <label>Age<span class="required">*</span></label>
+                            <input type="number" name="entry.382166275" required>
+                        </div>
+                        <div class="questions">
+                            <label>Section</label>
+                            <p>For APEC Students</p>
+                            <input type="text" name="entry.1355983197">
+                        </div>
+                        <div class="questions">
+                            <label>Branch</label>
+                            <p>For APEC Students</p>
+                            <input type="text" name="entry.1505788412">
+                        </div>
+                        <button type="submit" class="submit-button">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../JS/main.js"></script>
+</html>

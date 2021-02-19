@@ -531,6 +531,21 @@ body {
           text-decoration: underline #E8D6AF;
 }
 
+.section-one .main-content button {
+  font-size: clamp(1.25rem, 4vw, 2.1875rem);
+  font-weight: 500;
+  margin-top: 40px;
+  cursor: pointer;
+  width: Min(40vw, 18.125rem);
+  height: Min(13vw, 4.875rem);
+  background-color: #E8D6AF;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 25px;
+  border: none;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
 .section-one svg {
   position: absolute;
   bottom: 0;
@@ -797,5 +812,111 @@ body {
 #dry-run-page .main-content .usability-responses .question-and-answer p {
   padding-top: .2rem;
   text-decoration: underline;
+}
+
+#workshop-info-page .section-one {
+  height: 28rem;
+  width: 100%;
+  background: linear-gradient(90.88deg, #FFC236 17.68%, #E8D6AF 86.1%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#workshop-info-page .section-one h1 {
+  font-size: clamp(2.9rem, 6.5vw, 5.625rem);
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#workshop-info-page .section-container {
+  padding: Min(7%, 8rem) Min(15%, 12.5rem) Min(7%, 8rem) Min(15%, 12.5rem);
+}
+
+#workshop-info-page .main-content {
+  background-color: #eee;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  padding: 2rem;
+  width: 100%;
+}
+
+#workshop-info-page .main-content .question-and-answer {
+  padding: 1.5rem 0;
+}
+
+#workshop-info-page .main-content .question-and-answer h1 {
+  font-size: clamp(2.3rem, 2.85vw, 5.2rem);
+}
+
+#workshop-info-page .main-content .question-and-answer p {
+  color: #242526;
+  font-size: clamp(1.3rem, 1.35vw, 2.15rem);
+  line-height: 1.8;
+  text-decoration: underline;
+}
+
+#workshop-info-page .main-content .question-and-answer .form {
+  width: 100%;
+  padding: 0 0.5rem;
+}
+
+#workshop-info-page .main-content .question-and-answer .form form {
+  background-color: #F6F3EA59;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 1rem;
+  padding-bottom: 1.5rem;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#workshop-info-page .main-content .question-and-answer .form form .questions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#workshop-info-page .main-content .question-and-answer .form form .questions label {
+  font-size: clamp(1.85rem, 5vw, 2.8rem);
+  font-weight: 500;
+}
+
+#workshop-info-page .main-content .question-and-answer .form form .questions p {
+  color: gray;
+  font-style: italic;
+}
+
+#workshop-info-page .main-content .question-and-answer .form form .questions input {
+  padding: .3rem;
+  font-size: 1.3rem;
+}
+
+#workshop-info-page .main-content .question-and-answer .form form .questions .required {
+  color: red;
+  font-style: italic;
+}
+
+#workshop-info-page .main-content .question-and-answer .form form .submit-button {
+  background-color: #E8D6AF;
+  border: none;
+  border: 2px black solid;
+  border-radius: .9rem;
+  margin-top: 1rem;
+  width: 100%;
+  height: clamp(2rem, 5vw, 3rem);
+  font-size: clamp(1.1rem, 5vw, 1.5rem);
+  cursor: pointer;
 }
 /*# sourceMappingURL=styles.css.map */
