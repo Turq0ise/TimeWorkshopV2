@@ -140,11 +140,11 @@ function changeNavColors(entries) {
     entries.forEach(entry => {
         if(!entry.isIntersecting) {
             getMenuBtn.style.color = "#000"
-            getHeaderLogo.src = "../IMG & VIDS/Logo/Time Logo.png"
+            getHeaderLogo.src = "/IMG & VIDS/Logo/Time Logo.png"
         }
         else {
             getMenuBtn.style.color = "#fff"
-            getHeaderLogo.src = "../IMG & VIDS/Logo/Time Logo White.png"
+            getHeaderLogo.src = "/IMG & VIDS/Logo/Time Logo White.png"
         }
     });
 }
