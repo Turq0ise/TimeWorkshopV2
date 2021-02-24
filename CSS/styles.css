@@ -148,11 +148,8 @@ body {
   background-color: rgba(63, 62, 58, 0.949);
 }
 
-.side-nav .content ul li:hover a {
-  color: #FFC236;
-}
-
-.side-nav .content ul #arrow-down:hover {
+.side-nav .content ul li:hover a,
+.side-nav .content ul li:hover #arrow-down {
   color: #FFC236;
 }
 

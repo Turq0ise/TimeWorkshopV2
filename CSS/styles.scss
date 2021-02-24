@@ -50,6 +50,7 @@ body {
     position: fixed;
     width: 100vw;
     z-index: 100;
+    //background-color: #F6F3EA;
 
     .nav-bar {
         display: flex;
@@ -117,13 +118,10 @@ body {
             }
 
             li:hover {
-                a {
+                a,
+                #arrow-down {
                     color: #FFC236;
                 }
-            }
-
-            #arrow-down:hover {
-                color: #FFC236;
             }
         }
     }

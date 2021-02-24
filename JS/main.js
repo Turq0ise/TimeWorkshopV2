@@ -132,6 +132,7 @@ window.addEventListener("load", function() {
 
 /* Change Nav Colors Start */
 
+var getHeaderLogo = document.querySelector("#header-logo")
 var getLandingPage = document.querySelector(".landing")
 var iObserverForNav = new IntersectionObserver(changeNavColors)
 
@@ -139,10 +140,12 @@ function changeNavColors(entries) {
     entries.forEach(entry => {
         if(!entry.isIntersecting) {
             getMenuBtn.style.color = "#000"
+            getHeaderLogo.src = "../IMG & VIDS/Logo/Time Logo.png"
         }
-        else [
-            getMenuBtn.style.color = "#E8D6AF"
-        ]
+        else {
+            getMenuBtn.style.color = "#fff"
+            getHeaderLogo.src = "../IMG & VIDS/Logo/Time Logo White.png"
+        }
     });
 }
 
