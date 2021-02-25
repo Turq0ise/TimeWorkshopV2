@@ -50,7 +50,6 @@ body {
     position: fixed;
     width: 100vw;
     z-index: 100;
-    //background-color: #F6F3EA;
 
     .nav-bar {
         display: flex;
@@ -58,12 +57,13 @@ body {
         z-index: 99;
 
         img {
-            height: 45px;
+            height: 43px;
         }
 
         #menu {
-            font-size: 45px;
+            font-size: 43px;
             text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            cursor: pointer;
         }
     }
 }
@@ -93,12 +93,12 @@ body {
                 a {
                     text-decoration: none;
                     color: #E8D6AF;
-                    font-size: clamp(1rem, 3vw, 2rem);
+                    font-size: 2rem;
                     font-weight: 600;
                 }
     
                 #arrow-down {
-                    font-size: clamp(.9rem, 3vw, 1.9rem);
+                    font-size: 1.9rem;
                     color: #E8D6AF;
                 }
             }
@@ -183,11 +183,11 @@ body {
         0%{
             transform: translateY(-50%);
             opacity: 0.2;
-            }
+        }
         100% {
             transform: translateY(0);
             opacity: 1;
-            }
+        }
     }
 
     .flip-anim {
@@ -631,6 +631,7 @@ body {
         display: flex;
         align-items: center;
         justify-content: center;
+        text-align: center;
 
         h1 {
             font-size: clamp(2.9rem, 6.5vw, 5.625rem);
@@ -639,7 +640,7 @@ body {
     }
     
     .section-container {
-        padding: Min(7%, 8rem) Min(15%, 12.5rem) Min(7%, 8rem) Min(15%, 12.5rem);
+        padding: Min(7%, 8rem) Min(9.5%, 12.5rem) Min(7%, 8rem) Min(9.5%, 12.5rem);
     }
 
     .main-content {
@@ -649,12 +650,12 @@ body {
         width: 100%;
         
         h1 {
-            font-size: clamp(2.3rem, 2.85vw, 5.2rem);
+            font-size: clamp(2rem, 2.8vw, 5.2rem);
         }
 
         p {
             color: #242526;
-            font-size: clamp(1.3rem, 1.35vw, 2.15rem);
+            font-size: clamp(1rem, 1.3vw, 2.15rem);
             line-height: 1.8;
         }
         
@@ -669,7 +670,7 @@ body {
                 padding: 1.5rem 0;
 
                 h1 {
-                    font-size: clamp(2rem, 2vw, 4.8rem);
+                    font-size: clamp(1.85rem, 2vw, 4.8rem);
                     font-weight: 500;
                 }
 
@@ -678,6 +679,12 @@ body {
                     text-decoration: underline;
                 }
             }
+        }
+    }
+
+    @media(max-width: 750px) {
+        .main-content {
+            padding: 1.25rem;
         }
     }
 }
@@ -690,6 +697,7 @@ body {
         display: flex;
         align-items: center;
         justify-content: center;
+        text-align: center;
 
         h1 {
             font-size: clamp(2.9rem, 6.5vw, 5.625rem);
@@ -698,25 +706,25 @@ body {
     }
     
     .section-container {
-        padding: Min(7%, 8rem) Min(15%, 12.5rem) Min(7%, 8rem) Min(15%, 12.5rem);
+        padding: Min(7%, 8rem) Min(9.5%, 12.5rem) Min(7%, 8rem) Min(9.5%, 12.5rem);
     }
 
     .main-content {
         background-color: #eee;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-        padding: 2rem;
+        padding: 1.5rem;
         width: 100%;
         
         .question-and-answer {
             padding: 1.5rem 0;
 
             h1 {
-                font-size: clamp(2.3rem, 2.85vw, 5.2rem);
+                font-size: clamp(2rem, 2.8vw, 5.2rem);
             }
     
             p {
                 color: #242526;
-                font-size: clamp(1.3rem, 1.35vw, 2.15rem);
+                font-size: clamp(1rem, 1.3vw, 2.15rem);
                 line-height: 1.8;
                 text-decoration: underline;
             }
@@ -771,6 +779,12 @@ body {
                     }
                 }
             }
+        }
+    }
+
+    @media(max-width: 750px) {
+        .main-content {
+            padding: 1.25rem;
         }
     }
 }

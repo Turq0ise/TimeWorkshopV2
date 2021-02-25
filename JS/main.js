@@ -45,47 +45,47 @@ function toggleDropDown() {
 var midday
 
 function mainClock() {
-    var date = new Date();
-    var hours = updateHours(date.getHours());
-    var minutes = updateTime(date.getMinutes());
+    var date = new Date()
+    var hours = updateHours(date.getHours())
+    var minutes = updateTime(date.getMinutes())
 
-    document.querySelector("#clock").innerHTML = `${hours}:${minutes} ${midday}`;
-    setTimeout(mainClock, 1000);
+    document.querySelector("#clock").innerHTML = `${hours}:${minutes} ${midday}`
+    setTimeout(mainClock, 1000)
 }
 
 function updateTime(n) { // For minutes and seconds
     if(n < 10) {
-        return "0" + n;
+        return "0" + n
     }
     else {
-        return n;
+        return n
     }
 }
 
 function updateHours(n) {
     if(n < 10 && n != 0) { //Returns 1am to 9am
-        midday = "AM";
-        return "0" + n;
+        midday = "AM"
+        return "0" + n
     }
     else if(n == 10 || n == 11) { //Returns 10am and 11am
-        midday = "AM";
-        return n;
+        midday = "AM"
+        return n
     }
     else if(n == 12) { //Returns 12pm
-        midday = "PM";
-        return n;
+        midday = "PM"
+        return n
     }
     else if(n > 12 && n < 22) { //Returns 1pm to 9pm
-        midday = "PM";
-        return "0" + n % 12;
+        midday = "PM"
+        return "0" + n % 12
     }
     else if(n == 22 || n == 23) { //Returns 10pm and 11pm
-        midday = "PM";
-        return n % 12;
+        midday = "PM"
+        return n % 12
     }
     else if(n == 0) { //Returns 12am
         midday = "AM"
-        return n = 12;
+        return n = 12
     }
 
     return midday
@@ -119,13 +119,11 @@ function wordCycle() {
 /* Loader Start */
 
 window.addEventListener("load", function() {
-    var getLoader = document.querySelector(".loader");
-    var getBody = document.querySelector("body");
-    var getLandingText = document.querySelector("#landing-text")
+    var getLoader = document.querySelector(".loader")
+    var getBody = document.querySelector("body")
     
-    getLoader.classList.add("hide");
-    getBody.style.overflowY = "visible";
-    //getLandingText.classList.toggle("simple-anim")
+    getLoader.classList.add("hide")
+    getBody.style.overflowY = "visible"
 })
 
 /* Loader End */
@@ -192,27 +190,27 @@ function autoCardCycle() {
     var getDots = document.getElementsByClassName("dot-btn")
 
     for(i = 0; i < getDots.length; i++) {
-        getCards[i].style.display = "none";
+        getCards[i].style.display = "none"
     }
-    cardIndex++;
+    cardIndex++
 
     if(cardIndex > getCards.length) {
-        cardIndex = 1;
+        cardIndex = 1
     }
 
     for(i = 0; i < getDots.length; i++) {
-        getDots[i].classList.remove("active");
+        getDots[i].classList.remove("active")
     }
 
-    getCards[cardIndex - 1].style.display = "block";
-    getDots[cardIndex - 1].classList.add("active");
-    timer = setTimeout(autoCardCycle, 5000);
+    getCards[cardIndex - 1].style.display = "block"
+    getDots[cardIndex - 1].classList.add("active")
+    timer = setTimeout(autoCardCycle, 5000)
 }
 
 function manualSlides(n) {
     cardIndex = n;
-    clearTimeout(timer);
-    autoCardCycle();
+    clearTimeout(timer)
+    autoCardCycle()
 }
 
 autoCardCycle()
@@ -228,7 +226,7 @@ function changeWorkshop() {
     var getWorkshops = document.getElementsByClassName("workshops")
 
     for(i = 0; i < getWorkshops.length; i++) {
-        getWorkshops[i].style.display = "none";
+        getWorkshops[i].style.display = "none"
     }
     workshopIndex++
 

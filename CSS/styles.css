@@ -81,12 +81,13 @@ body {
 }
 
 .main-nav-bar .nav-bar img {
-  height: 45px;
+  height: 43px;
 }
 
 .main-nav-bar .nav-bar #menu {
-  font-size: 45px;
+  font-size: 43px;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
 }
 
 .side-nav {
@@ -122,12 +123,12 @@ body {
 .side-nav .content ul li a {
   text-decoration: none;
   color: #E8D6AF;
-  font-size: clamp(1rem, 3vw, 2rem);
+  font-size: 2rem;
   font-weight: 600;
 }
 
 .side-nav .content ul li #arrow-down {
-  font-size: clamp(0.9rem, 3vw, 1.9rem);
+  font-size: 1.9rem;
   color: #E8D6AF;
 }
 
@@ -760,6 +761,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  text-align: center;
 }
 
 #dry-run-page .section-one h1 {
@@ -768,7 +770,7 @@ body {
 }
 
 #dry-run-page .section-container {
-  padding: Min(7%, 8rem) Min(15%, 12.5rem) Min(7%, 8rem) Min(15%, 12.5rem);
+  padding: Min(7%, 8rem) Min(9.5%, 12.5rem) Min(7%, 8rem) Min(9.5%, 12.5rem);
 }
 
 #dry-run-page .main-content {
@@ -780,12 +782,12 @@ body {
 }
 
 #dry-run-page .main-content h1 {
-  font-size: clamp(2.3rem, 2.85vw, 5.2rem);
+  font-size: clamp(2rem, 2.8vw, 5.2rem);
 }
 
 #dry-run-page .main-content p {
   color: #242526;
-  font-size: clamp(1.3rem, 1.35vw, 2.15rem);
+  font-size: clamp(1rem, 1.3vw, 2.15rem);
   line-height: 1.8;
 }
 
@@ -802,13 +804,19 @@ body {
 }
 
 #dry-run-page .main-content .usability-responses .question-and-answer h1 {
-  font-size: clamp(2rem, 2vw, 4.8rem);
+  font-size: clamp(1.85rem, 2vw, 4.8rem);
   font-weight: 500;
 }
 
 #dry-run-page .main-content .usability-responses .question-and-answer p {
   padding-top: .2rem;
   text-decoration: underline;
+}
+
+@media (max-width: 750px) {
+  #dry-run-page .main-content {
+    padding: 1.25rem;
+  }
 }
 
 #workshop-info-page .section-one {
@@ -824,6 +832,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  text-align: center;
 }
 
 #workshop-info-page .section-one h1 {
@@ -832,14 +841,14 @@ body {
 }
 
 #workshop-info-page .section-container {
-  padding: Min(7%, 8rem) Min(15%, 12.5rem) Min(7%, 8rem) Min(15%, 12.5rem);
+  padding: Min(7%, 8rem) Min(9.5%, 12.5rem) Min(7%, 8rem) Min(9.5%, 12.5rem);
 }
 
 #workshop-info-page .main-content {
   background-color: #eee;
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  padding: 2rem;
+  padding: 1.5rem;
   width: 100%;
 }
 
@@ -848,12 +857,12 @@ body {
 }
 
 #workshop-info-page .main-content .question-and-answer h1 {
-  font-size: clamp(2.3rem, 2.85vw, 5.2rem);
+  font-size: clamp(2rem, 2.8vw, 5.2rem);
 }
 
 #workshop-info-page .main-content .question-and-answer p {
   color: #242526;
-  font-size: clamp(1.3rem, 1.35vw, 2.15rem);
+  font-size: clamp(1rem, 1.3vw, 2.15rem);
   line-height: 1.8;
   text-decoration: underline;
 }
@@ -915,5 +924,11 @@ body {
   height: clamp(2rem, 5vw, 3rem);
   font-size: clamp(1.1rem, 5vw, 1.5rem);
   cursor: pointer;
+}
+
+@media (max-width: 750px) {
+  #workshop-info-page .main-content {
+    padding: 1.25rem;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
