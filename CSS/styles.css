@@ -292,6 +292,7 @@ body {
   padding-bottom: 0;
   font-size: clamp(2.5rem, 7vw, 5.3rem);
   line-height: 1.3;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .workshop-info .goals {
@@ -300,6 +301,10 @@ body {
   height: fit-content;
   width: 100%;
   padding: Min(8%, 10rem);
+}
+
+.workshop-info .goals h1 {
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .workshop-info .goals .list {
@@ -347,6 +352,7 @@ body {
 
 .benefits .right-sub-section h1 {
   font-size: clamp(2.3rem, 6.5vw, 4.8rem);
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   line-height: 1;
 }
 
@@ -748,7 +754,7 @@ body {
   }
 }
 
-#dry-run-page .section-one {
+.under-workshops .section-one {
   height: 28rem;
   width: 100%;
   background: linear-gradient(90.88deg, #FFC236 17.68%, #E8D6AF 86.1%);
@@ -764,16 +770,16 @@ body {
   text-align: center;
 }
 
-#dry-run-page .section-one h1 {
+.under-workshops .section-one h1 {
   font-size: clamp(2.9rem, 6.5vw, 5.625rem);
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-#dry-run-page .section-container {
+.under-workshops .section-container {
   padding: Min(7%, 8rem) Min(9.5%, 12.5rem) Min(7%, 8rem) Min(9.5%, 12.5rem);
 }
 
-#dry-run-page .main-content {
+.under-workshops .main-content {
   background-color: #eee;
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -781,14 +787,32 @@ body {
   width: 100%;
 }
 
-#dry-run-page .main-content h1 {
+.under-workshops .main-content h1 {
   font-size: clamp(2rem, 2.8vw, 5.2rem);
 }
 
-#dry-run-page .main-content p {
+.under-workshops .main-content h2 {
+  font-size: clamp(1.7rem, 2.5vw, 4.7rem);
+}
+
+.under-workshops .main-content h3 {
+  font-size: clamp(1.35rem, 2vw, 3.7rem);
+}
+
+.under-workshops .main-content p {
   color: #242526;
   font-size: clamp(1rem, 1.3vw, 2.15rem);
   line-height: 1.8;
+}
+
+.under-workshops .main-content select {
+  font-size: clamp(1.3rem, 1.5vw, 2.9rem);
+}
+
+@media (max-width: 750px) {
+  .under-workshops .main-content {
+    padding: 1.25rem;
+  }
 }
 
 #dry-run-page .main-content .overall-feedback {
@@ -813,57 +837,11 @@ body {
   text-decoration: underline;
 }
 
-@media (max-width: 750px) {
-  #dry-run-page .main-content {
-    padding: 1.25rem;
-  }
-}
-
-#workshop-info-page .section-one {
-  height: 28rem;
-  width: 100%;
-  background: linear-gradient(90.88deg, #FFC236 17.68%, #E8D6AF 86.1%);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  text-align: center;
-}
-
-#workshop-info-page .section-one h1 {
-  font-size: clamp(2.9rem, 6.5vw, 5.625rem);
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-#workshop-info-page .section-container {
-  padding: Min(7%, 8rem) Min(9.5%, 12.5rem) Min(7%, 8rem) Min(9.5%, 12.5rem);
-}
-
-#workshop-info-page .main-content {
-  background-color: #eee;
-  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  padding: 1.5rem;
-  width: 100%;
-}
-
 #workshop-info-page .main-content .question-and-answer {
   padding: 1.5rem 0;
 }
 
-#workshop-info-page .main-content .question-and-answer h1 {
-  font-size: clamp(2rem, 2.8vw, 5.2rem);
-}
-
 #workshop-info-page .main-content .question-and-answer p {
-  color: #242526;
-  font-size: clamp(1rem, 1.3vw, 2.15rem);
-  line-height: 1.8;
   text-decoration: underline;
 }
 
@@ -926,9 +904,66 @@ body {
   cursor: pointer;
 }
 
-@media (max-width: 750px) {
-  #workshop-info-page .main-content {
-    padding: 1.25rem;
-  }
+#execution-result-page .main-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#execution-result-page .main-content .sub-content {
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+  color: #2a2a2a;
+}
+
+#execution-result-page .main-content .sub-content:hover {
+  color: #000;
+}
+
+#execution-result-page .option-tabs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 1rem;
+}
+
+#execution-result-page .option-tabs .main-content {
+  padding: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#execution-result-page .option-tabs .main-content p {
+  background-color: #5f5e5859;
+  padding: .7rem;
+  margin: .2rem 0;
+}
+
+#execution-result-page .option-tabs .indiv-participants {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#execution-result-page .option-tabs .indiv-participants .indiv-participants-name {
+  padding: 0 3rem;
+}
+
+#execution-result-page .option-tabs #participant-1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 /*# sourceMappingURL=styles.css.map */

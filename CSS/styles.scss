@@ -222,12 +222,17 @@ body {
         padding-bottom: 0;
         font-size: clamp(2.5rem, 7vw, 5.3rem);
         line-height: 1.3;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     }
 
     .goals {
         height: fit-content;
         width: 100%;
         padding: Min(8%, 10rem);
+
+        h1 {
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        }
     
         .list {
             margin-top: 20px;
@@ -267,6 +272,7 @@ body {
 
         h1 {
             font-size: clamp(2.3rem, 6.5vw, 4.8rem);
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
             line-height: 1;
         }
 
@@ -623,7 +629,7 @@ body {
     }
 }
 
-#dry-run-page {
+.under-workshops {
     .section-one {
         height: 28rem;
         width: 100%;
@@ -638,19 +644,27 @@ body {
             text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         }
     }
-    
+
     .section-container {
         padding: Min(7%, 8rem) Min(9.5%, 12.5rem) Min(7%, 8rem) Min(9.5%, 12.5rem);
     }
 
-    .main-content {
+    .main-content{
         background-color: #eee;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         padding: 2rem;
         width: 100%;
-        
+
         h1 {
             font-size: clamp(2rem, 2.8vw, 5.2rem);
+        }
+
+        h2 {
+            font-size: clamp(1.7rem, 2.5vw, 4.7rem);
+        }
+
+        h3 {
+            font-size: clamp(1.35rem, 2vw, 3.7rem);
         }
 
         p {
@@ -658,7 +672,21 @@ body {
             font-size: clamp(1rem, 1.3vw, 2.15rem);
             line-height: 1.8;
         }
-        
+
+        select {
+            font-size: clamp(1.3rem, 1.5vw, 2.9rem);
+        }
+    }
+
+    @media(max-width: 750px) {
+        .main-content {
+            padding: 1.25rem;
+        }
+    }
+}
+
+#dry-run-page {
+    .main-content {
         .overall-feedback {
             padding-top: 0.5rem;
         }
@@ -681,51 +709,14 @@ body {
             }
         }
     }
-
-    @media(max-width: 750px) {
-        .main-content {
-            padding: 1.25rem;
-        }
-    }
 }
 
 #workshop-info-page {
-    .section-one {
-        height: 28rem;
-        width: 100%;
-        background: linear-gradient(90.88deg, #FFC236 17.68%, #E8D6AF 86.1%);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-
-        h1 {
-            font-size: clamp(2.9rem, 6.5vw, 5.625rem);
-            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-        }
-    }
-    
-    .section-container {
-        padding: Min(7%, 8rem) Min(9.5%, 12.5rem) Min(7%, 8rem) Min(9.5%, 12.5rem);
-    }
-
     .main-content {
-        background-color: #eee;
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-        padding: 1.5rem;
-        width: 100%;
-        
         .question-and-answer {
             padding: 1.5rem 0;
-
-            h1 {
-                font-size: clamp(2rem, 2.8vw, 5.2rem);
-            }
     
             p {
-                color: #242526;
-                font-size: clamp(1rem, 1.3vw, 2.15rem);
-                line-height: 1.8;
                 text-decoration: underline;
             }
 
@@ -781,10 +772,48 @@ body {
             }
         }
     }
+}
 
-    @media(max-width: 750px) {
+#execution-result-page {
+    .main-content {
+        display: flex;
+
+        .sub-content{
+            width: 100%;
+            text-align: center;
+            cursor: pointer;
+            color: #2a2a2a;
+        }
+
+        .sub-content:hover{
+            color: #000;
+        }
+    }
+
+    .option-tabs {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+
         .main-content {
-            padding: 1.25rem;
+            padding: 3rem;
+            display: flex;
+            flex-direction: column;
+            
+            p {
+                background-color: #5f5e5859;
+                padding: .7rem;
+                margin: .2rem 0;
+            }
+        }
+
+        .indiv-participants {
+            display: none;
+            flex-direction: column;
+        }
+
+        #participant-1 {
+            display: flex;
         }
     }
 }

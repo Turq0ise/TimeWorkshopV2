@@ -1,5 +1,4 @@
 /* Sidebar Navigation Start */
-
 var getMenuBtn = document.querySelector("#menu")
 var getSidebar = document.querySelector(".side-nav")
 var menuStatus = false
@@ -16,11 +15,9 @@ function toggleSideNav() {
         menuStatus = false
     }
 }
-
 /* Sidebar Navigation End */
 
 /* Sidebar Drop Down Menu Start */
-
 var getArrowBtn = document.querySelector("#arrow-down")
 var getDropDownItems = document.querySelector("#drop-down-items")
 var dropDownStatus = false
@@ -37,13 +34,10 @@ function toggleDropDown() {
         dropDownStatus = false
     }
 }
-
 /* Sidebar Drop Down Menu End */
 
 /* Clock Start */
-
 var midday
-
 function mainClock() {
     var date = new Date()
     var hours = updateHours(date.getHours())
@@ -53,7 +47,7 @@ function mainClock() {
     setTimeout(mainClock, 1000)
 }
 
-function updateTime(n) { // For minutes and seconds
+function updateTime(n) {
     if(n < 10) {
         return "0" + n
     }
@@ -63,40 +57,37 @@ function updateTime(n) { // For minutes and seconds
 }
 
 function updateHours(n) {
-    if(n < 10 && n != 0) { //Returns 1am to 9am
+    if(n < 10 && n != 0) {
         midday = "AM"
         return "0" + n
     }
-    else if(n == 10 || n == 11) { //Returns 10am and 11am
+    else if(n == 10 || n == 11) {
         midday = "AM"
         return n
     }
-    else if(n == 12) { //Returns 12pm
+    else if(n == 12) {
         midday = "PM"
         return n
     }
-    else if(n > 12 && n < 22) { //Returns 1pm to 9pm
+    else if(n > 12 && n < 22) {
         midday = "PM"
         return "0" + n % 12
     }
-    else if(n == 22 || n == 23) { //Returns 10pm and 11pm
+    else if(n == 22 || n == 23) {
         midday = "PM"
         return n % 12
     }
-    else if(n == 0) { //Returns 12am
+    else if(n == 0) {
         midday = "AM"
         return n = 12
     }
 
     return midday
 }
-
 mainClock()
-
 /* Clock End */
 
 /* Word Cycle Start */
-
 var getOutput = document.querySelector("#cycle")
 var wordList = ["Everyone", "Students", "Teachers"]
 var wordIndex = 0
@@ -113,11 +104,9 @@ function wordCycle() {
 
     setTimeout(wordCycle, 3000)
 }
-
 /* Word Cycle End */
 
 /* Loader Start */
-
 window.addEventListener("load", function() {
     var getLoader = document.querySelector(".loader")
     var getBody = document.querySelector("body")
@@ -125,11 +114,9 @@ window.addEventListener("load", function() {
     getLoader.classList.add("hide")
     getBody.style.overflowY = "visible"
 })
-
 /* Loader End */
 
 /* Change Nav Colors Start */
-
 var getHeaderLogo = document.querySelector("#header-logo")
 var getLandingPage = document.querySelector(".landing")
 var iObserverForNav = new IntersectionObserver(changeNavColors)
@@ -146,13 +133,10 @@ function changeNavColors(entries) {
         }
     });
 }
-
 iObserverForNav.observe(getLandingPage)
-
 /* Change Nav Colors End */
 
 /* Changing Text with Intersection Observer Start */
-
 var getLandingText = document.querySelector("#landing-text")
 var getBottomLandingSection = document.querySelector("#bottom")
 var options = {
@@ -174,13 +158,10 @@ function changeLandingText(entries) {
         }
     })
 }
-
 iObserverForLandingText.observe(getBottomLandingSection)
-
 /* Changing Text with Intersection Observer End */
 
 /* Feedback Card Cycle Start */
-
 var cardIndex = 0
 var timer = null
 
@@ -212,13 +193,10 @@ function manualSlides(n) {
     clearTimeout(timer)
     autoCardCycle()
 }
-
 autoCardCycle()
-
 /* Feedback Card Cycle End */
 
 /* Change Workshop Button Start */
-
 var workshopIndex = 0
 
 function changeWorkshop() {
@@ -236,13 +214,4 @@ function changeWorkshop() {
 
     getWorkshops[workshopIndex - 1].style.display = "block"
 }
-
 /* Change Workshop Button End */
-
-/* Coming Soon Alert Start */
-
-function comingSoonAlert() {
-    alert("Coming Soon")
-}
-
-/* Coming Soon Alert End */
