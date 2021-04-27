@@ -125,53 +125,28 @@ questions = [
     "How likely are you to tell a friend about this workshop?"
 ]
 
-{
-    var nameResults = document.getElementById("name-summary-results")
-    var questionOneDiv = document.getElementById("question-one").innerHTML += `<h3>${questions[0]}</h3><div class="results" id="question-one-summary-results"></div>`
-    var questionOneResults = document.getElementById("question-one-summary-results")
-    var questionTwoDiv = document.getElementById("question-two").innerHTML += `<h3>${questions[1]}</h3><div class="results" id="question-two-summary-results"></div>`
-    var questionTwoResults = document.getElementById("question-two-summary-results")
-    var questionThreeDiv = document.getElementById("question-three").innerHTML += `<h3>${questions[2]}</h3><div class="results" id="question-three-summary-results"></div>`
-    var questionThreeResults = document.getElementById("question-three-summary-results")
-    var questionFourDiv = document.getElementById("question-four").innerHTML += `<h3>${questions[3]}</h3><div class="results" id="question-four-summary-results"></div>`
-    var questionFourResults = document.getElementById("question-four-summary-results")
-    var questionFiveDiv = document.getElementById("question-five").innerHTML += `<h3>${questions[4]}</h3><div class="results" id="question-five-summary-results"></div>`
-    var questionFiveResults = document.getElementById("question-five-summary-results")
-    var questionSixDiv = document.getElementById("question-six").innerHTML += `<h3>${questions[5]}</h3><div class="results" id="question-six-summary-results"></div>`
-    var questionSixResults = document.getElementById("question-six-summary-results")
-    var questionSevenDiv = document.getElementById("question-seven").innerHTML += `<h3>${questions[6]}</h3><div class="results" id="question-seven-summary-results"></div>`
-    var questionSevenResults = document.getElementById("question-seven-summary-results")
-    var questionEightDiv = document.getElementById("question-eight").innerHTML += `<h3>${questions[7]}</h3><div class="results" id="question-eight-summary-results"></div>`
-    var questionEightResults = document.getElementById("question-eight-summary-results")
-    var questionNineDiv = document.getElementById("question-nine").innerHTML += `<h3>${questions[8]}</h3><div class="results" id="question-nine-summary-results"></div>`
-    var questionNineResults = document.getElementById("question-nine-summary-results")
-
-    for(i = 0; i < participants.length; i++) {
-        if(participants[i].isHidden) {
-            nameResults.innerHTML += `<p>Participant ${i + 1}</p>`
-        }else {
-            nameResults.innerHTML += `<p>${participants[i].name}</p>`
-        }
-        questionOneResults.innerHTML += `<p>${participants[i].responses[0]}</p>`
-        questionTwoResults.innerHTML += `<p>${participants[i].responses[1]}</p>`
-        questionThreeResults.innerHTML += `<p>${participants[i].responses[2]}</p>`
-        questionFourResults.innerHTML += `<p>${participants[i].responses[3]}</p>`
-        questionFiveResults.innerHTML += `<p>${participants[i].responses[4]}</p>`
-        questionSixResults.innerHTML += `<p>${participants[i].responses[5]}</p>`
-        questionSevenResults.innerHTML += `<p>${participants[i].responses[6]}</p>`
-        questionEightResults.innerHTML += `<p>${participants[i].responses[7]}</p>`
-        questionNineResults.innerHTML += `<p>${participants[i].responses[8]}</p>`
-    }
+for(i = 0; i < questions.length; i++) {
+    document.getElementById(`question-${i + 1}`).innerHTML += `<h3>${questions[i]}</h3><div class="results" id="question-${i + 1}-summary-results"></div>`
 }
 
-{
-    var selectElement = document.getElementById("select-participants")
-    for(i = 0; i < participants.length; i++) {
-        if(participants[i].isHidden) {
-            selectElement.innerHTML += `<option value="participant-${i + 1}" class="select-values">Participant ${i + 1}</option>`
-        }else {
-            selectElement.innerHTML += `<option value="participant-${i + 1}" class="select-values">${participants[i].fname}</option>`
-        }
+for(i = 0; i < participants.length; i++) {
+    var nameSummaryResults = document.getElementById("name-summary-results")
+    var selectParticipants = document.getElementById("select-participants")
+    var getParticipantNumber = document.getElementById(`participant-${i + 1}`)
+
+    if(participants[i].isHidden) {
+        nameSummaryResults.innerHTML += `<p>Participant ${i + 1}</p>`
+        selectParticipants.innerHTML += `<option value="participant-${i + 1}" class="select-values">Participant ${i + 1}</option>`
+        getParticipantNumber.innerHTML += `<div class="main-content main-content-names"><h1>Name:</h1><h3>Participant ${i + 1}</h3></div>`
+    }else {
+        nameSummaryResults.innerHTML += `<p>${participants[i].name}</p>`
+        selectParticipants.innerHTML += `<option value="participant-${i + 1}" class="select-values">${participants[i].fname}</option>`
+        getParticipantNumber.innerHTML += `<div class="main-content main-content-names"><h1>Name:</h1><h3>${participants[i].name}</h3></div>`
+    }
+
+    for(x = 0; x < questions.length; x++) {
+        document.getElementById(`question-${x + 1}-summary-results`).innerHTML += `<p>${participants[i].responses[x]}</p>`
+        getParticipantNumber.innerHTML += `<div class="main-content"><h3>${questions[x]}</h3><p>${participants[i].responses[x]}</p></div>`
     }
 }
 
@@ -189,6 +164,7 @@ function summaryTabFunction() {
         optionTabStatus = true
     }
 }
+summaryTabFunction()
 
 function indivTabFunction() {
     if(optionTabStatus) {
@@ -202,24 +178,7 @@ function indivTabFunction() {
     }
 }
 
-summaryTabFunction()
-
-for(i = 0; i < participants.length; i++) {
-    var test = document.getElementById(`participant-${i + 1}`)
-    if(participants[i].isHidden) {
-        test.innerHTML += `<div class="main-content"><h1>Name:</h1><h3>Participant ${i + 1}</h3></div>`
-    }else {
-        test.innerHTML += `<div class="main-content"><h1>Name:</h1><h3>${participants[i].name}</h3></div>`
-    }
-    
-
-    for(x = 0; x < questions.length; x++) {
-        test.innerHTML += `<div class="main-content"><h3>${questions[x]}</h3><p>${participants[i].responses[x]}</p></div>`
-    }
-}
-
 var selectParticipant = document.getElementById("select-participants")
-
 selectParticipant.addEventListener("input", function() {
     for(i = 0; i < participants.length; i++) {
         document.getElementById(`participant-${i + 1}`).style.display = "none"

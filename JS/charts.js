@@ -1,5 +1,4 @@
 var getChartOne = document.getElementById("chartOne")
-
 var chartOne = new Chart(getChartOne, {
     type: "doughnut",
     data: {
@@ -12,7 +11,6 @@ var chartOne = new Chart(getChartOne, {
 })
 
 var getChartTwo = document.getElementById("chartTwo")
-
 var chartTwo = new Chart(getChartTwo, {
     type: "bar",
     data: {
@@ -26,7 +24,6 @@ var chartTwo = new Chart(getChartTwo, {
 })
 
 var getChartThree = document.getElementById("chartThree")
-
 var chartThree = new Chart(getChartThree, {
     type: "doughnut",
     data: {
@@ -39,7 +36,6 @@ var chartThree = new Chart(getChartThree, {
 })
 
 var getChartFour = document.getElementById("chartFour")
-
 var chartFour = new Chart(getChartFour, {
     type: "doughnut",
     data: {
@@ -52,7 +48,6 @@ var chartFour = new Chart(getChartFour, {
 })
 
 var getChartFive = document.getElementById("chartFive")
-
 var chartFive = new Chart(getChartFive, {
     type: "doughnut",
     data: {
